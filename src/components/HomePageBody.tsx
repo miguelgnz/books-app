@@ -9,13 +9,13 @@ export default function HomePageBody({
   const { theme } = useThemeContext();
 
   return (
-    <body
+    <div
       style={{
         backgroundColor: `${theme === "light" ? "#FFFF" : "#34276b"}`,
         height: "100vh",
       }}
     >
       {children}
-    </body>
+    </div>
   );
 }

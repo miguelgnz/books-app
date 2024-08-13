@@ -22,13 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <NextUIProvider>
-        <ThemeContextProvider>
-          <ReduxProvider>
-            <HomePageBody>{children}</HomePageBody>
-          </ReduxProvider>
-        </ThemeContextProvider>
-      </NextUIProvider>
+      <body>
+        <NextUIProvider>
+          <ThemeContextProvider>
+            <ReduxProvider>
+              <HomePageBody>{children}</HomePageBody>
+            </ReduxProvider>
+          </ThemeContextProvider>
+        </NextUIProvider>
+      </body>
     </html>
   );
 }
