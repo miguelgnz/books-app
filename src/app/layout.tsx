@@ -4,6 +4,9 @@ import "./globals.css";
 
 import ReduxProvider from "@/redux/ReduxProvider";
 import { NextUIProvider } from "@nextui-org/react";
+import { ThemeContextProvider } from "@/context/ThemeContext";
+
+import HomePageBody from "@/components/HomePageBody";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <NextUIProvider>
-          <ReduxProvider>{children}</ReduxProvider>
-        </NextUIProvider>
-      </body>
+      <NextUIProvider>
+        <ThemeContextProvider>
+          <ReduxProvider>
+            <HomePageBody>{children}</HomePageBody>
+          </ReduxProvider>
+        </ThemeContextProvider>
+      </NextUIProvider>
     </html>
   );
 }

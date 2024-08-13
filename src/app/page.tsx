@@ -1,17 +1,20 @@
 import BooksList from "@/components/BooksList";
+import ChangeThemeButton from "@/components/ChangeThemeButton";
 
 export default function Home() {
   return (
     <div
-      className="font-bold"
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: '7rem'
+        gap: "7rem",
       }}
     >
-      <h1 style={{fontSize: '44px'}}>BOOK EXPLORER</h1>
+      <div>
+        <h1 style={{ fontSize: "44px" }}>BOOK EXPLORER</h1>
+        <ChangeThemeButton />
+      </div>
       <BooksList />
     </div>
   );
